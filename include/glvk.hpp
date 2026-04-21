@@ -8,6 +8,8 @@ typedef unsigned int GLenum;
 
 typedef signed size_t GLsizeiptr;
 typedef int_ptr_t GLingptr;
+
+
 // FUNCTIONS
 void glInit() {
     // Used to initalise Vulkan
