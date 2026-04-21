@@ -4,6 +4,8 @@
 
 // TYPES
 typedef unsigned int GLuint;
+typedef int GLsizei;
+
 typedef unsigned int GLenum;
 
 typedef signed size_t GLsizeiptr;
