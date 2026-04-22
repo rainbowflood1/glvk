@@ -25,15 +25,20 @@ typedef int GLsizei;
 typedef unsigned int GLenum;
 
 typedef signed size_t GLsizeiptr;
-typedef int_ptr_t GLingptr;
+typedef intptr_t GLintptr;
 
+typedef char GLchar;
 
 // FUNCTIONS
 
 // These functions are needed to initalize Vulkan, this is not part of standard OpenGL
+
+// VULKAN VARIABLES
+
 void glInit() {
     // Used to initalise Vulkan
-  
+
+    
 }
 void glUnload() {
 
@@ -50,18 +55,30 @@ void glBindBuffer(GLenum target, GLint buffer) {
 
 }
 
-void glBufferData() {
+void glBufferData(GLenum target, GLsizeiptr size, const void* data, GLenum usage) {
 
 }
 // SHADERS
-void glCreateShader(GLenum type) {
+GLuint glCreateShader(GLenum type) {
 
 }
 
-void glShaderSource() {
+void glShaderSource(GLuint shader, GLsizei count, GLchar** string, const GLint* length) {
 
 }
-// Programs
-void glCreateProgram() {
+
+void glAttachShader(GLuint program, GLuint shader) {
+
+}
+// PROGRAMS
+GLuint glCreateProgram() {
+
+}
+
+void glLinkProgram(GLuint program) {
+
+}
+// Viewport
+void glViewport(GLint x, GLint y, GLsizei width, GLsizei height) {
 
 }
