@@ -1,4 +1,5 @@
 // HEADERS
+#include <vulkan/vulkan.h>
 
 // DEFINES
 
@@ -14,7 +15,7 @@
 #define GL_STREAM_DRAW 0x88E0
 #define GL_STREAM_READ 0x88E1
 #define GL_STREAM_COPY 0x88E2
-//
+
 
 // TYPES
 
@@ -29,10 +30,15 @@ typedef int_ptr_t GLingptr;
 
 // FUNCTIONS
 
+// These functions are needed to initalize Vulkan, this is not part of standard OpenGL
 void glInit() {
     // Used to initalise Vulkan
   
 }
+void glUnload() {
+
+}
+
 // OPENGL FUNCTIONS
 // Some of them are not finished
 // BUFFERS
