@@ -35,9 +35,25 @@ typedef char GLchar;
 
 // VULKAN VARIABLES
 
-void glInit() {
-    // Used to initalise Vulkan
+VkInstance instance;
 
+void glInit() { // Used to initalise Vulkan
+
+    // Create instance
+    VkApplicationInfo appInfo{
+        .sType = VK_STRUCTURE_TYPE_APPLICATION_INFO,
+        .pApplicationName = "OpenGL",
+        .applicationVersion = VK_MAKE_VERSION(1, 0, 0);
+        .pEngineName = "No Engine",
+        .engineVersion = VK_MAKE_VERSION(1, 0, 0),
+        .apiVersion = VK_API_VERSION_1_0;
+    };
+    VkInstanceCreateInfo createInfo{
+        .sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO,
+        .pApplicationInfo = &appInfo
+    };
+    // Used with GLFW
+    
     
 }
 void glUnload() {
